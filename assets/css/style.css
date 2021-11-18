@@ -112,10 +112,88 @@ li {
   Header styling starts here
 =================================*/
 
+header .wrapper {
+  width: 95%;
+  padding: 20px 0;
+}
 
+.menu:hover {
+  color: #b9b0b0;
+  cursor: pointer;
+  transition: 1s ease;
+}
 
+.responsive-nav {
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0%;
+}
 
+.responsive-nav::before {
+  content: '';
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: #ff0000;
+  z-index: -1;
+}
 
+.responsive-nav::after {
+  content: '';
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: #000;
+  z-index: -2;
+}
+
+nav {
+  height: 100vh;
+  position: relative;
+  padding-left: 30px;
+  background: #fff;
+  transition: .5s ease;
+}
+
+nav h1 { padding-top: 30px; }
+
+nav > ul, nav ul li > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li { margin-top: 15px; }
+nav ul li > ul { padding-left: 30px; }
+
+nav ul li a {
+  color: #000;
+  font-size: 16px;
+  transition: .5s ease;
+}
+
+nav ul li a:hover { color: #b9b0b0; }
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  border: none;
+  z-index: 2;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  color: #000;
+  transition: .5s ease;
+}
+
+.close:hover { color: #666; }
 
 /*=================================
   Header styling ends here
@@ -125,35 +203,34 @@ li {
   main styling starts here
 =================================*/
 
-
-
-
-
-
-
+main .wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -4;
+}
 
 /*=================================
   main styling ends here
 =================================*/
 
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  .responsive-nav { width: 40%; }
+}
 
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .responsive-nav { width: 75%; }
+}
 
-
-}  
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  .responsive-nav { width: 85%; }
+}
